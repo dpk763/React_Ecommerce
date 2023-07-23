@@ -14,7 +14,7 @@ const Item = (props) => {
 
   return (
     <>
-        <div className="card" id='item' style={{width:'20rem',height:'25rem'}}>
+        <div className="card" id='item' style={{width:'17rem',height:'25rem'}}>
 
         <div className="card"  style={{width:'20rem',height:'25rem'}} onMouseOver={imgchange} onMouseOut={imgchange1}>
             <img src={imgurl} alt="" style={{width:'20rem',height:'cover'}}/>

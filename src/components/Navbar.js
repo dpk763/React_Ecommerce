@@ -38,7 +38,7 @@ const Navbar = () => {
             </Link>
 
             <Link to="/reg" type="button" className="btn btn-primary">
-              <i className="bi bi-person-circle mx-2"></i>Log In / Register
+              <i className="bi bi-person-circle mx-2"></i>Log In
             </Link>
           </div>
 

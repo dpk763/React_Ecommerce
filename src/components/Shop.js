@@ -1,7 +1,7 @@
 import React from "react";
 import Item from "./Item";
-import item1 from "./images/items/item1.webp";
-import item2 from "./images/items/item2.webp";
+import Record from "../Record.json";
+import { Link } from "react-router-dom";
 const Shop = () => {
   document.title = "Shop";
   return (
@@ -12,81 +12,34 @@ const Shop = () => {
           Shop our new arrivals from established brands
         </p>
         <div className="row">
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+          {
+            Record && Record.map((record) => {
 
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+            return (
+                <div className="col-md-3 my-2 d-flex justify-content-center">
+              <Link key={record.id}
+                to="/products"
+                state={{
+                  img1: record.img1,
+                  img2: record.img2,
+                  img3: record.img3,
+                  img4: record.img4,
+                  img5: record.img5,
+                  proname: record.proname,
+                  price: record.price,
+                }}
+              >
+                  <Item
+                    imgsrc={record.img1}
+                    imgurl2={record.img2}
+                    itemname={record.proname}
+                    itemprice={record.price}
+                  />
+              </Link>
+                </div>
 
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-        </div>
-      </div>
-
-      <div className="container my-5">
-        <div className="row">
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+            );
+          })}
         </div>
       </div>
     </>

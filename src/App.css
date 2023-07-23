@@ -21,9 +21,10 @@ img{
     transform: scale(1.1);
 }
 
-a:hover{
-    text-decoration: underline;
+a{
+    text-decoration: none;
 }
+
 
 .card-box{
     background-color: white;  

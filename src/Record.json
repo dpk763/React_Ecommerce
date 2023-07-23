@@ -1,0 +1,44 @@
+
+[
+    {
+        "id" : 1,
+        "img1":"images/items/item1.webp",
+        "img2":"images/items/item2.webp",
+        "img3":"images/items/item3.jpg",
+        "img4":"images/items/item4.webp",
+        "img5":"images/items/item5.jpg",
+        "proname":"Innerbloom Puffer Jacket",
+        "price":500
+    },
+    {
+        "id" : 2,
+        "img1":"images/items/item1.webp",
+        "img2":"images/items/item2.webp",
+        "img3":"images/items/item3.jpg",
+        "img4":"images/items/item4.webp",
+        "img5":"images/items/item5.jpg",
+        "proname":"Innerbloom Puffer Jacket",
+        "price":500
+    },
+    {
+        "id" : 3,
+        "img1":"images/items/item1.webp",
+        "img2":"images/items/item2.webp",
+        "img3":"images/items/item3.jpg",
+        "img4":"images/items/item4.webp",
+        "img5":"images/items/item5.jpg",
+        "proname":"Innerbloom Puffer Jacket",
+        "price":500
+    },
+    {
+        "id" : 4,
+        "img1":"images/items/item1.webp",
+        "img2":"images/items/item2.webp",
+        "img3":"images/items/item3.jpg",
+        "img4":"images/items/item4.webp",
+        "img5":"images/items/item5.jpg",
+        "proname":"Innerbloom Puffer Jacket",
+        "price":500
+    }
+    
+]

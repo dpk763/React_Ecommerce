@@ -1,21 +1,21 @@
 import React from "react";
-import img1 from "../components/images/img1.webp";
-import img2 from "../components/images/img2.webp";
-import img3 from "../components/images/img2.jpg";
-import img4 from "../components/images/womens-top.webp";
-import img5 from "../components/images/accesories.webp";
-import img6 from "../components/images/men-clothing.webp";
-import img7 from "../components/images/denim.webp";
-import img8 from "../components/images/best-collections.webp";
-import img9 from "../components/images/awesome-tops.webp";
-import item1 from "./images/items/item1.webp";
-import item2 from "./images/items/item2.webp";
-import blog1 from "./images/blogimg/blog1.webp";
-import blog2 from "./images/blogimg/blog2.webp";
-import blog3 from "./images/blogimg/blog3.webp";
+import img1 from "../images/img1.webp";
+import img2 from "../images/img2.webp";
+import img3 from "../images/img2.jpg";
+import img4 from "../images/womens-top.webp";
+import img5 from "../images/accesories.webp";
+import img6 from "../images/men-clothing.webp";
+import img7 from "../images/denim.webp";
+import img8 from "../images/best-collections.webp";
+import img9 from "../images/awesome-tops.webp";
+import blog1 from "../images/blogimg/blog1.webp";
+import blog2 from "../images/blogimg/blog2.webp";
+import blog3 from "../images/blogimg/blog3.webp";
 import Offer from "./Offer";
 import Item from "./Item";
 import Blog from "./Blog";
+import Record from "../Record.json";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   document.title = "E-Cart";
@@ -120,41 +120,35 @@ const Home = () => {
         </p>
         <div className="row">
       
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+        {
+            Record && Record.map((record) => {
 
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+            return (
+                <div className="col-md-3 my-2 d-flex justify-content-center">
+              <Link key={record.id}
+                to="/products"
+                state={{
+                  img1: record.img1,
+                  img2: record.img2,
+                  img3: record.img3,
+                  img4: record.img4,
+                  img5: record.img5,
+                  proname: record.proname,
+                  price: record.price,
+                }}
+              >
+                  <Item
+                    imgsrc={record.img1}
+                    imgurl2={record.img2}
+                    itemname={record.proname}
+                    itemprice={record.price}
+                  />
+              </Link>
+                </div>
 
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
-
-          <div className="col-md-3 my-2 d-flex justify-content-center">
-            <Item
-              imgsrc={item1}
-              imgurl2={item2}
-              itemname="Innerbloom Puffer Jacket"
-              itemprice="Rs. 500.00"
-            />
-          </div>
+            );
+          })}
+         
         </div>
       </div>
 

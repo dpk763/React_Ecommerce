@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import payment from './images/payment.jpg'
+import payment from '../images/payment.jpg'
 
 const Footer = () => {
   return (

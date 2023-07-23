@@ -9,7 +9,6 @@ import Features from "./components/Features";
 import Newin from "./components/Newin";
 import './index.css';
 import './App.css';
-
 import {
   BrowserRouter as Router,
   Routes,
@@ -17,11 +16,16 @@ import {
 } from "react-router-dom";
 import Login from "./components/Login";
 import Signup from "./components/Signup";
+import Products from "./components/Products";
+
+
 
 const App = () => {
  
   return (
     <>
+
+
       <Router>
         <Navbar />
 
@@ -35,6 +39,8 @@ const App = () => {
       <Route exact path="/newin" element={<Newin/>}></Route>
       <Route exact path="/login" element={<Login/>}></Route>
       <Route exact path="/signup" element={<Signup/>}></Route>
+      <Route exact path="/products" element={<Products/>}></Route>
+      
 
           
         </Routes>
