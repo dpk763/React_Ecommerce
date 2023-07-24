@@ -12,7 +12,7 @@ const Navbar = () => {
         <div className="container-fluid">
           <div>
             <Link className="navbar-brand" to="/">
-              E-Com
+            Tommy Cart
             </Link>
           </div>
 
@@ -34,7 +34,7 @@ const Navbar = () => {
           <div className="d-md-none">
             <Link to="/cart" className="text-dark mx-4">
               <i className="bi bi-cart3 text-primary mx-2"></i>
-              <span className="badge text-bg-danger">4</span>
+              <span className="badge text-bg-danger">0</span>
             </Link>
 
             <Link to="/reg" type="button" className="btn btn-primary">
@@ -66,7 +66,7 @@ const Navbar = () => {
           <div className="d-none d-lg-block">
             <Link to="/cart" className="text-dark mx-4">
               <i className="bi bi-cart3 text-primary mx-2"></i>
-              <span className="badge text-bg-danger">4</span>
+              <span className="badge text-bg-danger">0</span>
             </Link>
 
             <Link to="/reg" type="button" className="btn btn-primary">

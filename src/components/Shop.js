@@ -16,8 +16,8 @@ const Shop = () => {
             Record && Record.map((record) => {
 
             return (
-                <div className="col-md-3 my-2 d-flex justify-content-center">
-              <Link key={record.id}
+                <div className="col-md-3 my-2 d-flex justify-content-center" key={record.id}>
+              <Link 
                 to="/products"
                 state={{
                   img1: record.img1,

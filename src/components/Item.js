@@ -24,7 +24,7 @@ const Item = (props) => {
             </div>
         </div>
         <h6>{props.itemname}</h6>
-        <p>{props.itemprice}</p>
+        <p>Rs. {props.itemprice}</p>
         </div>
     </>
   )

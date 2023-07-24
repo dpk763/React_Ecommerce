@@ -2,43 +2,44 @@
 [
     {
         "id" : 1,
-        "img1":"images/items/item1.webp",
-        "img2":"images/items/item2.webp",
-        "img3":"images/items/item3.jpg",
-        "img4":"images/items/item4.webp",
+        "img1":"images/items/item1.jpg",
+        "img2":"images/items/item3.jpg",
+        "img3":"images/items/item2.jpg",
+        "img4":"images/items/item4.jpg",
         "img5":"images/items/item5.jpg",
-        "proname":"Innerbloom Puffer Jacket",
-        "price":500
+        "proname":"Tommy Hilfiger",
+        "price":2519
     },
     {
         "id" : 2,
-        "img1":"images/items/item1.webp",
-        "img2":"images/items/item2.webp",
-        "img3":"images/items/item3.jpg",
-        "img4":"images/items/item4.webp",
-        "img5":"images/items/item5.jpg",
-        "proname":"Innerbloom Puffer Jacket",
-        "price":500
+        "img1":"images/items/item7.jpg",
+        "img2":"images/items/item10.jpg",
+        "img3":"images/items/item8.jpg",
+        "img4":"images/items/item9.jpg",
+        "img5":"images/items/item6.jpg",
+        "proname":"Tommy Hilfiger",
+        "price":1959
     },
     {
         "id" : 3,
-        "img1":"images/items/item1.webp",
-        "img2":"images/items/item2.webp",
-        "img3":"images/items/item3.jpg",
-        "img4":"images/items/item4.webp",
-        "img5":"images/items/item5.jpg",
-        "proname":"Innerbloom Puffer Jacket",
-        "price":500
+        "img1":"images/items/item11.jpg",
+        "img2":"images/items/item12.jpg",
+        "img3":"images/items/item13.jpg",
+        "img4":"images/items/item14.jpg",
+        "img5":"images/items/item15.jpg",
+        "proname":"Tommy Hilfiger",
+        "price":2519
     },
     {
         "id" : 4,
-        "img1":"images/items/item1.webp",
-        "img2":"images/items/item2.webp",
-        "img3":"images/items/item3.jpg",
-        "img4":"images/items/item4.webp",
-        "img5":"images/items/item5.jpg",
-        "proname":"Innerbloom Puffer Jacket",
-        "price":500
+        "img1":"images/items/item16.jpg",
+        "img2":"images/items/item17.jpg",
+        "img3":"images/items/item18.jpg",
+        "img4":"images/items/item19.jpg",
+        "img5":"images/items/item20.jpg",
+        "proname":"Tommy Hilfiger",
+        "price":3679
     }
+   
     
 ]

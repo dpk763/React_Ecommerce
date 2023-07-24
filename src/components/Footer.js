@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="container-fluid p-4">
             <div className="row">
                 <div className="col-md-3 my-3">
-                <h1>E-Cart</h1>
+                <h1>Tommy Cart</h1>
                 <address>
                     55 Gallaxy Colony
                     <br />

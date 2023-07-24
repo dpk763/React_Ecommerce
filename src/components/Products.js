@@ -16,7 +16,6 @@ const Products = (props) => {
   let est1 = new Date(d.setDate(d.getDate()+6));
   let day = `${days[est.getDay()]} ${est.getDate()} ${months[est.getMonth()]} - ${days[est1.getDay()]} ${est1.getDate()} ${months[est1.getMonth()]}`;
 
-  console.log(day)
 
 
   let change = (e) => {
@@ -39,6 +38,31 @@ const Products = (props) => {
 
   }
 
+  
+  
+  const imgzoomin = (e)=>{
+   const zimg = document.querySelector("#zimg");
+   const x = e.clientX - e.target.offsetLeft;
+   const y = e.clientY - e.target.offsetTop;
+   zimg.style.transformOrigin =`${x}px ${y}px`;
+   zimg.style.transform=`scale(2.5)`;
+  }
+  const imgzoomout = ()=>{
+    const zimg = document.querySelector("#zimg");
+    zimg.style.transformOrigin =`center`;
+    zimg.style.transform=`scale(1)`;
+  }
+
+  // const [itemsize,setitemsize]=useState('S');
+  const sizebtn = (e) =>{
+
+    // setitemsize(e.target.innerHTML);
+    e.target.classList.toggle('bg-primary');
+    e.target.classList.toggle('text-light');
+
+  }
+  
+
 
   return (
     <>
@@ -48,40 +72,40 @@ const Products = (props) => {
             <div className="row my-2">
               <div className="col-4">
                 <img
-                  src={data.img1}
-                  className="rounded mx-auto d-block my-2"
-                  onClick={change}
-                  style={{ width: "50%", cursor: "pointer" }}
-                  alt="..."
-                />
-                <img
                   src={data.img2}
                   className="rounded mx-auto d-block my-2"
-                  onClick={change}
+                  onMouseOver={change}
                   style={{ width: "50%", cursor: "pointer" }}
                   alt="..."
                 />
                 <img
                   src={data.img3}
                   className="rounded mx-auto d-block my-2"
-                  onClick={change}
+                  onMouseOver={change}
                   style={{ width: "50%", cursor: "pointer" }}
                   alt="..."
                 />
                 <img
                   src={data.img4}
                   className="rounded mx-auto d-block my-2"
-                  onClick={change}
+                  onMouseOver={change}
+                  style={{ width: "50%", cursor: "pointer" }}
+                  alt="..."
+                />
+                <img
+                  src={data.img5}
+                  className="rounded mx-auto d-block my-2"
+                  onMouseOver={change}
                   style={{ width: "50%", cursor: "pointer" }}
                   alt="..."
                 />
               </div>
-              <div className="col-8">
+              <div className="col-8" style={{overflow:'hidden',cursor:'zoom-in'}} onMouseMove={imgzoomin} onMouseLeave={imgzoomout} >
                 <img
                   src={img}
                   className="rounded d-block my-2"
                   style={{ width: "99%" }}
-                  alt="..."
+                  alt="..." id="zimg"
                 />
               </div>
             </div>
@@ -89,13 +113,13 @@ const Products = (props) => {
 
           <div className="col-md-6 my-3">
             <h4>{data.proname}</h4>
-            <h4 className="my-3">{data.price}</h4>
+            <h4 className="my-3">Rs. {data.price}</h4>
             <p className="my-3">Tax included.</p>
 
             <div className="mt-5 mb-2">
-                <div className="btn border-primary mx-2">S</div>
-                <div className="btn border-primary mx-2">M</div>
-                <div className="btn border-primary mx-2">L</div>
+                <div className="btn border-primary mx-2" onClick={sizebtn}>S</div>
+                <div className="btn border-primary mx-2" onClick={sizebtn}>M</div>
+                <div className="btn border-primary mx-2" onClick={sizebtn}>L</div>
             </div>
 
             <div className="row">
